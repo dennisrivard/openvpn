@@ -51,7 +51,7 @@ EOF
     sudo openvpn --version
 #    sudo openvpn --compress --client --dev tun --proto udp --remote {$host} {$port} --resolv-retry infinite --nobind --persist-key --persist-tun --comp-lzo --verb 3 --ca ca.crt --cert client.crt --key client.key --cipher AES-256-CBC --data-ciphers AES-256-GCM:AES-128-GCM:AES-256-CBC&
 #    sudo openvpn --client --dev tun --proto udp --remote {$host} {$port} --resolv-retry infinite --nobind --persist-key --persist-tun --cipher AES-256-CBC --data-ciphers AES-256-GCM:AES-128-GCM:AES-256-CBC --comp-lzo --verb 9 --tls-client --verify-x509-name sc5-cicd-ovpn-1.squaretrade.com name --ca ca.crt --cert client.crt --key client.key &
-    sudo openvpn --client --dev tun --proto udp --remote {$host} {$port} --resolv-retry infinite --nobind --persist-key --persist-tun --cipher AES-256-CBC --data-ciphers AES-256-GCM:AES-128-GCM:AES-256-CBC --comp-lzo --verb 9 --tls-client --verify-x509-name sc5-cicd-ovpn-1.squaretrade.com name --ca ca.crt --cert client.crt --key client.key &
+    sudo openvpn --client --dev tun --proto udp --remote ${host} ${port} --resolv-retry infinite --nobind --persist-key --persist-tun --cipher AES-256-CBC --data-ciphers AES-256-GCM:AES-128-GCM:AES-256-CBC --comp-lzo --verb 9 --tls-client --verify-x509-name sc5-cicd-ovpn-1.squaretrade.com name --ca ca.crt --cert client.crt --key client.key &
 
 
 echo "Using AES-256-CBC"

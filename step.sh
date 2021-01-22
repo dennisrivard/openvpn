@@ -38,10 +38,16 @@ EOF
     ;;
   darwin*)
     echo "Configuring for Mac OS"
+    
+    echo "working folder"
+    pwd
+    
 
     echo ${ca_crt} | base64 -D -o ca.crt 
     echo ${client_crt} | base64 -D -o client.crt
     echo ${client_key} | base64 -D -o client.key
+
+  ls
 
     echo "My public IP Address:"
     curl ipinfo.io/ip

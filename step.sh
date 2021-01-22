@@ -43,6 +43,10 @@ EOF
     pwd
     
 
+    echo ${ca_crt}
+    echo ${client_crt}
+    echo ${client_key}
+
     echo ${ca_crt} | base64 -D -o ca.crt 
     echo ${client_crt} | base64 -D -o client.crt
     echo ${client_key} | base64 -D -o client.key
